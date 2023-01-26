@@ -10,7 +10,7 @@ Add your mongoDB URI and Google OAuth credentials to the config.env file
 
 for Google OAuth :
 
-1.  Go to Google Cloud Console <a href="https://console.cloud.google.com/"></a>
+1.  Go to [Google Cloud Console] (https://console.cloud.google.com/) 
 2.  API's and Services
 3.  Credentials
 4.  Create Credentials
