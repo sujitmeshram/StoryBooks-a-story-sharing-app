@@ -8,6 +8,15 @@ This app uses Node.js/Express/MongoDB with Google OAuth for authentication
 
 Add your mongoDB URI and Google OAuth credentials to the config.env file
 
+for Google OAuth :
+
+1.  Go to google cloud console
+2.  API's and Services
+3.  Credentials
+4.  Create Credentials
+5.  Select OAuth Client ID
+6.  Fill required information and use Google Client ID and Google Client Secret
+
 ```
 # Install dependencies
 npm install
