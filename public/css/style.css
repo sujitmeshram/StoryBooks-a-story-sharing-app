@@ -2,6 +2,7 @@ p {
   margin: 10px 0 !important;
 }
 
+/* for login container */
 .login-container {
   width: 400px;
   margin-top: 50px;
@@ -25,13 +26,13 @@ p {
   font-size: 26px !important;
 }
 
-.input-group{
-  display:table;
-  width:100%;
+.input-group {
+  display: table;
+  width: 100%;
 }
 .input-group .input-field,
-.input-group .input-group-addon{
-  display:table-cell;
+.input-group .input-group-addon {
+  display: table-cell;
 }
 
 .search-form {

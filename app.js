@@ -7,7 +7,7 @@ const exphbs = require("express-handlebars");
 const methodOverride = require("method-override");
 const passport = require("passport");
 const session = require("express-session");
-const MongoStore = require("connect-mongo");
+const MongoStore = require("connect-mongo"); //https://www.npmjs.com/package/connect-mongo
 const connectDB = require("./config/db"); //for connecting the db
 
 // Load config
@@ -70,16 +70,18 @@ app.engine(
 app.set("view engine", ".hbs");
 
 // Sessions
+// https://www.npmjs.com/package/express-session#:~:text=proxy%0Aapp.use(-,session,-(%7B%0A%20%20secret%3A%20%27keyboard
 app.use(
   session({
     secret: "keyboard cat",
     resave: false,
     saveUninitialized: false,
-    store: MongoStore.create({ mongoUrl: process.env.MONGO_URI }),
+    store: MongoStore.create({ mongoUrl: process.env.MONGO_URI }), //using connect-mongo for storing session,
+    //so it didn't thworback to again login after refresh the page
   })
 );
 
-// Passport middleware
+// Passport middlewares
 app.use(passport.initialize());
 app.use(passport.session());
 

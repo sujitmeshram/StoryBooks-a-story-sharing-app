@@ -12,6 +12,7 @@
 </head>
 
 <body>
+    {{!-- inserting header partial here  ./partials/_header.hbs --}}
     {{> _header}}
     {{> _add_btn}}
     <div class="container">
@@ -19,13 +20,21 @@
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+   
+   {{!-- for ckeditor --}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ckeditor/4.14.1/ckeditor.js"
         integrity="sha256-bEIQpI72w9NJuIVhTLFUF2/8uxl0u5800r8ddViuv+o=" crossorigin="anonymous"></script>
 
     <script>
+        {{!-- since I am using materialzie, I have to initialize the sidenav --}}
         M.Sidenav.init(document.querySelector('.sidenav'))
+
+        {{!-- initializing form selector here --}}
         M.FormSelect.init(document.querySelector('#status'))
 
+        {{!-- for adding CKEditor --}}
+        {{!-- https://www.npmjs.com/package/ckeditor --}}
+        {{!-- however I used cdn link here above --}}
         CKEDITOR.replace('body', {
             plugins: 'wysiwygarea, toolbar, basicstyles, link'
         })
